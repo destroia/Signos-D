@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ImaAbc="clr-namespace:Signos.ViewModels"
+           
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             x:Class="Signos.Views.ImageAbcView"
+                     >
+
+    <ContentPage.BindingContext>
+        <ImaAbc:ImageAbcViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+        <video:VideoPlayer Source="video.mp4" WidthRequest="400" HeightRequest="250"
+                            HorizontalOptions="Center" VerticalOptions="Start" >
+        
+
+        </video:VideoPlayer>
+            <Label Text="asdasdas" TextColor="Black" FontSize="Large" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
+    <!--<ScrollView>
+        <StackLayout>
+               
+                <Image Source="{Binding Image}" HorizontalOptions="Center" 
+                       VerticalOptions="Center" WidthRequest="300" 
+                       HeightRequest="300" Margin="30" />
+
+
+            <StackLayout>
+                    <Label Text="{Binding Letra}" FontSize="Large" FontAttributes="Bold" TextColor="Black" AnchorY="30"
+                   HorizontalOptions="Center" />
+                </StackLayout>
+
+        </StackLayout>
+            
+        </ScrollView>-->

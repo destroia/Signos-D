@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Abc="clr-namespace:Signos.ViewModels"
+             x:Class="Signos.Views.AbcedarioView">
+    
+    <ContentPage.BindingContext>
+        <Abc:AbcedarioViewModel/>
+    </ContentPage.BindingContext>
+        
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                   
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Text="A" Command="{Binding ACmd}" Grid.Column="0" Grid.Row="0" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="B" Command="{Binding BCmd}" Grid.Column="1" Grid.Row="0" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="C" Command="{Binding CCmd}" Grid.Column="2" Grid.Row="0" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="D" Command="{Binding DCmd}" Grid.Column="3" Grid.Row="0" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="E" Command="{Binding ECmd}" Grid.Column="4" Grid.Row="0" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="F" Command="{Binding FCmd}" Grid.Column="0" Grid.Row="1" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="G" Command="{Binding GCmd}" Grid.Column="1" Grid.Row="1" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="H" Command="{Binding HCmd}" Grid.Column="2" Grid.Row="1" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="I" Command="{Binding ICmd}" Grid.Column="3" Grid.Row="1" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="J" Command="{Binding JCmd}" Grid.Column="4" Grid.Row="1" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="K" Command="{Binding KCmd}" Grid.Column="0" Grid.Row="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="L" Command="{Binding LCmd}" Grid.Column="1" Grid.Row="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="M" Command="{Binding MCmd}" Grid.Column="2" Grid.Row="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="N" Command="{Binding NCmd}" Grid.Column="3" Grid.Row="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="Ñ" Command="{Binding NNCmd}" Grid.Column="4" Grid.Row="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="O" Command="{Binding OCmd}" Grid.Column="0" Grid.Row="3" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="P" Command="{Binding PCmd}" Grid.Column="1" Grid.Row="3" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="Q" Command="{Binding QCmd}" Grid.Column="2" Grid.Row="3" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="R" Command="{Binding RCmd}" Grid.Column="3" Grid.Row="3" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="S" Command="{Binding SCmd}" Grid.Column="4" Grid.Row="3" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="T" Command="{Binding TCmd}" Grid.Column="0" Grid.Row="4" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="U" Command="{Binding UCmd}" Grid.Column="1" Grid.Row="4" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="V" Command="{Binding VCmd}" Grid.Column="2" Grid.Row="4" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="W" Command="{Binding WCmd}" Grid.Column="3" Grid.Row="4" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="X" Command="{Binding XCmd}" Grid.Column="4" Grid.Row="4" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="Y" Command="{Binding YCmd}" Grid.Column="0" Grid.Row="5" FontSize="Medium" FontAttributes="Bold"/>
+                <Button Text="Z" Command="{Binding ZCmd}" Grid.Column="1" Grid.Row="5" FontSize="Medium" FontAttributes="Bold"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
