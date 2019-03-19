@@ -1,30 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+ <Btn:BottomBarPage
+    xmlns:Btn="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms" xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:views="clr-namespace:Signos.Views"
-            x:Class="Signos.Views.MainPage"
-            NavigationPage.HasNavigationBar="False">
-    <TabbedPage.Children>
-        <NavigationPage Title="Abecedario">
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
-            <x:Arguments>
-                <views:AbcedarioView />
-            </x:Arguments>
-        </NavigationPage>
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:sd="clr-namespace:Signos.ViewModels"
+    x:Class="Signos.Views.MainPage"
+             NavigationPage.HasNavigationBar="True" Title="Signos" 
+             android:Button.UseDefaultShadow="True">
+
+
+    <!--Btn:BottomBarPageExtensions.TabColor="Aqua"-->
+    <ContentPage Title="Abecedario" Icon="Inicios.png" 
+            >
+        <ContentPage.BindingContext>
+            <sd:DeshboardViewModel/>
+        </ContentPage.BindingContext>
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout BackgroundColor="#46E85B">
+
+
+                    <ImageButton  
+                         Source="Abecedario.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16"  >
+
+                    </ImageButton>
+
+                    <ImageButton 
+                         Source="Familia.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16,0,16,0" >
+
+                    </ImageButton>
+                    <ImageButton 
+                         Source="Cordialidades.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16" >
+
+                    </ImageButton>
+
+
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+
+    </ContentPage>
+
+
+
+
+    <ContentPage Title="Abecedario" Icon="Logros.png"  
+           
+                 >
+       
         
-        <NavigationPage Title="About">
-            <NavigationPage.Icon>
+    </ContentPage>
+    <ContentPage Title="Abecedario" Icon="Usuario.png" 
+           >
+
+        <Label Text="eeeeee"/>
+        <!--<views:Deshboard />-->
+
+    </ContentPage>
+    <ContentPage Title="Abecedario" Icon="Ajustes.png" 
+           >
+
+        <Label Text="eeeeee"/>
+        <!--<views:Deshboard />-->
+
+    </ContentPage>
+    
+
+    <!--<TabbedPage Title="About" >
+            
+            <TabbedPage.Icon>
+                
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_about.png"/>
+                    <On Platform="iOS,Android" Value="Inicio.png"/>
+                    
                 </OnPlatform>
-            </NavigationPage.Icon>
-            <x:Arguments>
-                <views:AboutPage />
-            </x:Arguments>
-        </NavigationPage>
-    </TabbedPage.Children>
-</TabbedPage>
+            </TabbedPage.Icon>
+           
+                <views:AbcedarioView/>
+            
+        </TabbedPage>-->
+   
+</Btn:BottomBarPage>

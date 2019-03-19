@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Vi="clr-namespace:Signos.ViewModels"
+             x:Class="Signos.Views.Deshboard">
+    <ContentPage.BindingContext>
+        <Vi:DeshboardViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="#46E85B">
+            
+          
+            <ImageButton  
+                         Source="Abecedario.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16" >
+                
+            </ImageButton>
+            
+            <ImageButton 
+                         Source="Familia.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16,0,16,0" >
+
+            </ImageButton>
+            <ImageButton 
+                         Source="Cordialidades.png" Command="{Binding AbcCmd}"
+                         BackgroundColor="Transparent" Margin="16" >
+
+            </ImageButton>
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
